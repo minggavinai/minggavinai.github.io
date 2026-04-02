@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <title>2048 數字實驗 - AGENT GAVIN AI 研究所</title>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1855180407483197" crossorigin="anonymous"></script>
+
+  <link href="style/main.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+  <style>
+    /* 研究所品牌一致化樣式 */
+    :root { --primary: #00ffcc; }
+    .btn-lab-home {
+        position: absolute; top: 10px; left: 10px; z-index: 1000;
+        padding: 8px 15px; background: rgba(0, 255, 204, 0.2); 
+        color: var(--primary); border: 1px solid var(--primary);
+        text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 13px;
+        backdrop-filter: blur(5px); transition: 0.3s;
+    }
+    .btn-lab-home:hover { background: var(--primary); color: #000; }
+  </style>
+
+  <script>
+    /* 恢復為原始數字等級 */
+    var my_list = {2:'2',4:'4',8:'8',16:'16',32:'32',64:'64',128:'128',256:'256',512:'512',1024:'1024',2048:'2048',4096:'4096',8192:'8192',16384:'16384'};
+    var my_mark = {2:'加油！',4:'繼續努力',8:'不錯喔',16:'越來越強了',32:'突破 32！',64:'快到 128 了',128:'精彩的操作',256:'你是專家嗎？',512:'即將達成目標',1024:'不可思議！',2048:'恭喜達成 2048！',4096:'大師級水平',8192:'傳奇玩家',16384:'神級操作！'};
+    var my_goal = 2048;
+  </script>
+</head>
+<body>
+  <a href="https://minggavinai.github.io/" class="btn-lab-home">← 返回研究所</a>
+
+  <div class="container">
+    <div class="heading">
+      <h1 class="title">2048</h1>
+      <div class="scores-container">
+        <div class="score-container">0</div>
+        <div class="best-container">0</div>
+      </div>
+    </div>
+
+    <div class="above-game">
+      <p class="game-intro">挑戰自我，合併更大的數字。在這個數位實驗中測試您的邏輯極限！</p>
+      <a class="restart-button">新遊戲</a>
+    </div>
+
+    <div class="game-container">
+      <div class="game-message">
+        <p></p>
+        <div class="lower">
+	        <a class="keep-playing-button">繼續挑戰</a>
+          <a class="retry-button">重新開始</a>
+        </div>
+      </div>
+
+      <div class="grid-container">
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+      </div>
+
+      <div class="tile-container"></div>
+    </div>
+
+    <p class="game-explanation">
+      <strong class="important">玩法：</strong> 使用 <strong>方向鍵</strong> 移動方塊。當兩個具有相同數字的方塊碰撞時，它們會 <strong>合併成一個翻倍的數字！</strong>
+    </p>
+    <hr>
+    <p>
+    本實驗由 <a href="https://minggavinai.github.io/">AGENT GAVIN AI 研究所</a> 提供技術支持。
+    </p>
+  </div>
+
+  <script src="js/bind_polyfill.js"></script>
+  <script src="js/classlist_polyfill.js"></script>
+  <script src="js/animframe_polyfill.js"></script>
+  <script src="js/keyboard_input_manager.js"></script>
+  <script src="js/html_actuator.js"></script>
+  <script src="js/grid.js"></script>
+  <script src="js/tile.js"></script>
+  <script src="js/local_storage_manager.js"></script>
+  <script src="js/game_manager.js"></script>
+  <script src="js/application.js"></script>
+</body>
+</html>
